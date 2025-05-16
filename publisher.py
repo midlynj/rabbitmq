@@ -14,7 +14,7 @@ messages = ["Error message", "Warning message", "Info message", "Critical messag
 
 for i in range(10):
     randomNum = random.randint(0, len(severity)-1)
-    print(randomNum)
+    LOGGER.info(randomNum)
     message = messages[randomNum]
     rk = severity[randomNum]
     channel.basic_publish(exchange='logs_exchange', routing_key=rk, body=message)

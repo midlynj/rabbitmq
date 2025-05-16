@@ -17,7 +17,7 @@ LOGGER.info('[*] waiting for the messages')
 
 
 def callback(ch, method, properties, body):
-    LOGGER.info(f"[x] Writing to File::::  {body}")
+    LOGGER.critical(f"[x] Writing to File::::  {body}")
     FILE_LOGGER.critical("********URGENT********")
 
 

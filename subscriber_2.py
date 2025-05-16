@@ -12,8 +12,6 @@ result = channel.queue_declare(queue='', exclusive=True)
 
 queue_name = result.method.queue
 
-# print("Subscriber queue_name =", queue_name)
-
 severity = ["Error", "Warning", "Info"]
 
 channel.queue_bind(exchange='logs_exchange', queue=queue_name, routing_key="Error")
